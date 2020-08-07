@@ -1,28 +1,27 @@
 import * as React from 'react'
-import { Image, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { Alert, Image, Text, TouchableOpacity, StyleSheet } from 'react-native'
 
 export default class NavButtons extends React.Component {
   constructor(props) {
     super(props)
-    this.id = 7
   }
 
   render() {
     return (
       <TouchableOpacity
-        style={styles.movie}
+        onPress = {() => {Alert.alert("My id is " + this.props.id)}}
       >
-        <Image source={require('./examplemovie.jpg')} />
+        <Image source={require('./examplemovie.jpg')} style={styles.movie} />
       </TouchableOpacity>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  button: {
-    width: 100,
-    height: 200,
-    backgroundColor: '#58111a',
+  movie: {
+    aspectRatio: 150/220,
+    /* height: 155, */
+    margin: '5%',
   },
 })
 

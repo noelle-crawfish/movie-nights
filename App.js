@@ -18,7 +18,13 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Watch Next" component={HomeScreen} />
+        <Stack.Screen name="Watch Next" component={HomeScreen} 
+          options={{
+            headerStyle: {
+              backgroundColor: '#dc112c',
+            },
+          }}
+        />
         <Stack.Screen name="Browse" component={MovieBrowser} />
       {/* <Stack.Screen name="Search" component={MovieSearcher} /> */}
       </Stack.Navigator>

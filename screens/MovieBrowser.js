@@ -12,8 +12,9 @@ class MovieList extends React.Component {
   }
 }
 
-export default class MovieBrowser extends React.Component {
 
+
+export default class MovieBrowser extends React.Component {
   render() {
     return (
       <NavigationContainer>

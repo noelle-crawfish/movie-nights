@@ -4,9 +4,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from './screens/HomeScreen.js'
-import MovieBrowser from './screens/MovieBrowser.js'
+/* import MovieBrowser from './screens/MovieBrowser.js' */
 
 const Stack = createStackNavigator();
+
+function MovieBrowser() {
+  return (
+    <Text>Hello</Text>
+  )
+}
 
 function App() {
   return (
@@ -14,6 +20,7 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Watch Next" component={HomeScreen} />
         <Stack.Screen name="Browse" component={MovieBrowser} />
+      {/* <Stack.Screen name="Search" component={MovieSearcher} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

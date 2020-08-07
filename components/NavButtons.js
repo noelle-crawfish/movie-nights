@@ -13,14 +13,9 @@ export default class NavButtons extends React.Component {
         <View style={styles.container}>
           <TouchableOpacity
             style={styles.button}
+            onPress={() => this.setState({open: false})}
           >
-            <Text>For You</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.button}
-          >
-            <Text>Browse</Text>
+            <Text>Close</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -31,9 +26,15 @@ export default class NavButtons extends React.Component {
 
           <TouchableOpacity
             style={styles.button}
-            onPress={() => this.setState({open: false})}
           >
-            <Text>Close</Text>
+            <Text>Search</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {this.props.stack.navigate('Browse')}}
+          >
+            <Text>Browse</Text>
           </TouchableOpacity>
         </View>
       )
@@ -57,8 +58,8 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     position: 'absolute',
-    justifyContent: 'flex-end',
     alignItems: 'flex-end',
+    flexDirection: 'column-reverse',
   },
 
   button: {

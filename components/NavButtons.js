@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Text, TouchableOpacity, View, StyleSheet } from 'react-native'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 export default class NavButtons extends React.Component {
   constructor(props) {
@@ -15,26 +16,44 @@ export default class NavButtons extends React.Component {
             style={styles.button}
             onPress={() => this.setState({open: false})}
           >
-            <Text>Close</Text>
+            <Ionicons
+              name={'md-close'}
+              size={25}
+              color={'#000'}
+            />
+
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.button}
           >
-            <Text>Settings</Text>
+            <Ionicons
+              name={'md-settings'}
+              size={25}
+              color={'#000'}
+            />
+
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.button}
           >
-            <Text>Search</Text>
+            <Ionicons
+              name={'md-search'}
+              size={25}
+              color={'#000'}
+            />
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.button}
             onPress={() => {this.props.stack.navigate('Browse')}}
           >
-            <Text>Browse</Text>
+            <Ionicons
+              name={'md-apps'}
+              size={25}
+              color={'#000'}
+            />
           </TouchableOpacity>
         </View>
       )
@@ -45,7 +64,11 @@ export default class NavButtons extends React.Component {
             style={styles.button}
             onPress={() => this.setState({open: true})}
           >
-            <Text>Open</Text>
+            <Ionicons
+              name={'md-menu'}
+              size={25}
+              color={'#000'}
+            />
           </TouchableOpacity>
         </View>
       )
@@ -63,9 +86,9 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    width: 50,
-    height: 50,
-    backgroundColor: '#58111a',
+    width: 55,
+    height: 55,
+    backgroundColor: '#ffbf00',
     borderRadius: 100,
     margin: 10,
     justifyContent: 'center',
